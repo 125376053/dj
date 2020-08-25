@@ -43,6 +43,7 @@
 </template>
 
 <script>
+
     import {identifyMixins} from "./identify"
     export default {
         name: "login",
@@ -100,6 +101,9 @@
                     code: [{validator: validCode, trigger: "blur"}]
                 }
             };
+        },
+        mounted(){
+
         },
         methods: {
             pwdLogin(formName) {

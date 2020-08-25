@@ -21,6 +21,7 @@ export const loginRouter = [
                 name: "homePage",
                 meta: {
                     title: "我的桌面",
+
                     icon: "iconfont icon-tubiao-gongjuxiang-79 iconSize",
                     breadcrumb:false,// 是否显示面包导航
                 }

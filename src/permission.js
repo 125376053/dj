@@ -87,24 +87,25 @@ if (window.localStorage.getItem('userAuth')) {
             // 1 能在权限树里面找到
             // 2 路由不授权限树控制 （受权限树控制的 v里面必须有对应路由）
             // 3 不存在isOriginHidden
-            if(v || (route.meta && !route.meta.isAuth && !route.meta.isOriginHidden)){
+            if (v || (route.meta && !route.meta.isAuth && !route.meta.isOriginHidden)) {
                 Vue.set(route, 'hidden', false)
-            }else{
+            } else {
                 Vue.set(route, 'hidden', true)
             }
 
         }
     }
+
     frontRouterFlag(authList, loginRouter)
 }
 
 router.afterEach((to) => {
     // 路由过滤
-    if(window.localStorage.getItem('filterRouterName')){
-        store.commit('fillterMenu',window.localStorage.getItem('filterRouterName'))
-    }else{
+    if (window.localStorage.getItem('filterRouterName')) {
+        store.commit('fillterMenu', window.localStorage.getItem('filterRouterName'))
+    } else {
         // 全部路由
-        store.commit('permission_routers',router.options.routes)
+        store.commit('permission_routers', router.options.routes)
     }
     NProgress.done()
 })

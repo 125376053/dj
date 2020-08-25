@@ -1,6 +1,7 @@
 import axios from "axios"
 import router from "@/router"
 import {resetRouter} from "../../router"
+import { resetMenu } from "../../utils/resetMenu"
 const login = {
     state: {
         userInfo: {},
@@ -42,6 +43,7 @@ const login = {
                     router.push('/login')
                     state.isLogin = false
                     resetRouter()
+                    resetMenu()
                     //window.location.reload()
                 }
             })

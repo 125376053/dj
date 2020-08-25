@@ -1,0 +1,68 @@
+/*取消默认子菜单的右箭头*/
+.el-menu-item span i.el-icon-caret-right:before {
+    content: '';
+}
+
+/*水平菜单 垂直菜单 宽度修改*/
+.el-menu--collapse {
+    width: 56px !important;
+}
+
+.el-menu--popup {
+    box-shadow: none !important;
+    padding: 0 !important;
+}
+
+/*浮动导航子菜单*/
+.el-menu--vertical {
+    left: 56px !important;
+}
+
+/*.el-menu--horizontal>.el-menu-item{
+    width: 50px!important;
+}*/
+
+.el-menu {
+    border-right: 0;
+}
+
+/*  侧边导航背景色 */
+.el-submenu__title {
+    background: #f0f9fd;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 12px;
+    height: 44px;
+    line-height: 44px;
+    border-bottom: 1px solid #ccc;
+}
+
+.el-menu-item span, .el-submenu__title span {
+    padding-left: 10px;
+}
+
+/*鼠标进入背景效果*/
+.el-menu-item:hover, .el-submenu__title:hover {
+    background: #fafafa;
+    color:#2d6dcc!important;
+}
+
+/*选中导航增加背景样式*/
+.menu-wrapper .is-active {
+    background: #fafafa;
+    color:#2d6dcc;
+}
+
+/*选中子菜单激活父菜单*/
+.menu-wrapper .is-active > div {
+    background: #fafafa;
+    color:#2d6dcc!important;
+}
+
+.menu-wrapper .is-active > div > i {
+    background: transparent;
+    color:#2d6dcc!important;
+}
+
+.el-submenu.is-active .el-submenu__title {
+    border-bottom: 1px solid #ccc;
+}

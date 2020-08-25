@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border: 0;
+}
+
+html, body {
+    font-family:PingFangSC-Regular,'微软雅黑'!important;
+    font-size: 12px;
+    /*#E8ECF0*/
+    background: #F8F9FC;
+    overflow: hidden;
+}
+body{
+    font-size: 12px!important;
+}
+
+#app {
+    /*position: absolute;
+    height: 100%;
+    width: 100%;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;*/
+}
+
+/* 取消number输入框右侧箭头 */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+/*取消链接颜色和下划线*/
+a:link, a:visited, a:hover, a:active {
+    color: #000;
+    text-decoration: none !important;
+}
+
+/*重写消息提示固定位置，不管出多少个消息，位置都固定，这样一层盖一层美观*/
+.el-message {
+    top: 20px !important;
+    /*z-index: 9999!important;*/
+}
+
+/* loading背景色 */
+.el-loading-mask{
+    background: rgba(255, 255, 255, 0);
+}
+
+/*scrollbar水平滚动条*/
+.contentView .el-scrollbar__wrap {
+    overflow-x: hidden;
+}
+
+/*
+    主题色 #2d6dcc
+*/
+/* 头部 */
+.headerTop {
+    background:#2d6dcc;
+    color: #fff;
+    line-height: 70px;
+    height: 70px!important;
+    box-sizing: border-box;
+    /*  禁止头部缩放重叠 */
+    min-width: 800px;
+}
+
+/*左侧导航*/
+.leftNav {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    bottom: 0;
+    overflow: auto;
+    background: #f0f9fd;
+}
+
+/*内容区域*/
+.contentMain {
+    position: absolute;
+    left: 230px;
+    right: 0;
+    bottom: 0;
+    top: 70px;
+    padding: 0!important;
+    background: #E8ECF0;
+}

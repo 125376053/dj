@@ -1,0 +1,13 @@
+@import "../iconfont/iconfont.css";
+@import "./reset.css";
+@import "./leftNav.css";
+
+/* 权限样式 */
+.notAuth{
+    background: #ccc;
+    border: 0;
+}
+.notAuth:hover,.notAuth:visited,.notAuth:focus,.notAuth:active,.notAuth:focus-within{
+    background: #ccc;
+    border: 0;
+}

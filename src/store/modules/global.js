@@ -1,9 +1,10 @@
 import router from "../../router"
+import Vue from "vue"
 const global = {
     state: {
         loadingStatus: false,
         permission_routers:[],
-        needPage:[]
+        needPage:[],
     },
     mutations: {
         changeLoadingStatus(state, flag) {
@@ -30,7 +31,7 @@ const global = {
         },
         needPageNull(state){
             state.needPage = [];
-        }
+        },
     },
     actions: {
         changeLoadingStatus({ commit }, flag) {
@@ -39,7 +40,7 @@ const global = {
     },
     getters:{
         permission_routers:state=>state.permission_routers,
-        needPage:state=>state.needPage
+        needPage:state=>state.needPage,
     }
 }
 

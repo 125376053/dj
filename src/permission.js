@@ -78,19 +78,21 @@ if (window.localStorage.getItem('userAuth')) {
             if (route.children) {
                 frontRouterFlag(authList, route.children)
             }
+
             var v = authList.find(value => {
                 return route.name == value
             });
-            /*
-             1 在数组中的 菜单显示        v为true
-             2 不需要权限控制的 菜单显示  route.meta.isAuth  不存在   路由配置中需要权限控制的为true
-             3 原来就不让显示菜单的       route.meta.isOriginHidden 不存在  路由配置中本来就是隐藏的为true
-             */
-            if (v || (route.meta && !route.meta.isAuth && !route.meta.isOriginHidden)) {
+            // 找到返回string 找不到返回Undefined typeof v
+
+            // 1 能在权限树里面找到
+            // 2 路由不授权限树控制 （受权限树控制的 v里面必须有对应路由）
+            // 3 不存在isOriginHidden
+            if(v || (route.meta && !route.meta.isAuth && !route.meta.isOriginHidden)){
                 Vue.set(route, 'hidden', false)
-            } else {
+            }else{
                 Vue.set(route, 'hidden', true)
             }
+
         }
     }
     frontRouterFlag(authList, loginRouter)

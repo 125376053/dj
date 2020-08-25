@@ -32,7 +32,6 @@ export const loginRouter = [
         path: '/user',
         component: Layout,
         name:'user',
-        isAuth:true,// 是否受权限树控制
         redirect:{
             name:'userList'
         },
@@ -58,7 +57,6 @@ export const loginRouter = [
                 path: "userDetail",
                 component: () => import ("@/pages/user/detail"),
                 name: "userDetail",
-                isAuth:true,
                 meta: {
                     title: "用户详情",
                     icon: "",

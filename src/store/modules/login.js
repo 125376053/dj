@@ -42,6 +42,7 @@ const login = {
                     router.push('/login')
                     state.isLogin = false
                     resetRouter()
+                    //window.location.reload()
                 }
             })
         },

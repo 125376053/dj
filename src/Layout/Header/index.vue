@@ -55,9 +55,9 @@
                 this.$store.commit('logOut')
             },
             filterNav(name){
-                this.$store.commit('fillterMenu',name)
+                //this.$store.commit('fillterMenu',name)
                 // 记录现在选择的是哪个菜单下的路由
-                window.localStorage.setItem('filterRouterName',name)
+                //window.localStorage.setItem('filterRouterName',name)
                 this.$router.push('/home')
             }
         }

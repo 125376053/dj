@@ -33,9 +33,8 @@ Object.keys(utils).forEach(key => {
     Vue.prototype[key] = utils[key]
 });
 
-//处理全局过滤器
+//全局过滤器
 import * as custom from './filter';
-//获取对象的所有属性
 Object.keys(custom).forEach(key => {
     Vue.filter(key, custom[key])
 });
@@ -46,11 +45,10 @@ Object.keys(direct).forEach(key => {
     Vue.directive(key,direct[key])
 });
 
-//全局插件 调用this.函数名
+//全局插件
 import * as plugin from "./plugin";
 Vue.use(plugin);
 
-// 单一事件管理组件通信
 window.bus = new Vue()
 
 new Vue({

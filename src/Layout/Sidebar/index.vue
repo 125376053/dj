@@ -6,26 +6,21 @@
             <i class="iconfont" style="color:#fff;margin-top:43px;" :class="!collapse?'icon-tubiao-gongjuxiang-55':'icon-tubiao-gongjuxiang-56'"></i>
         </a>
 
-
         <el-scrollbar wrapClass="scrollbar-wrapper" style="height: 100%;">
             <el-menu
-                class="leftNavMenu"
-                ref="leftNavMenu"
                 mode="vertical"
                 :show-timeout="0"
-                :default-active="currentRoute"
-                :unique-opened="true"
-                :collapse="collapse"
-                @open="handleOpen"
-                @close="handleClose"
-                menu-trigger="click"
-                @select="handSelect"
+                class="leftNavMenu"
+                ref="leftNavMenu"
                 :collapse-transition="false"
+                :unique-opened="true"
+                :default-active="currentRoute"
+                :collapse="collapse"
                 background-color=""
                 text-color="#333"
                 active-text-color=""
             >
-                <sidebar-item :collapse="collapse" :routes="permission_routers"></sidebar-item>
+                <sidebar-item :routes="permission_routers"></sidebar-item>
             </el-menu>
         </el-scrollbar>
 
@@ -111,30 +106,10 @@
                 }
 
                 return routerArr
-            },
-            handleOpen () {
-
-            },
-            handleClose () {
-
-            },
-            handSelect(key, keyPath){
-                var nav = this.$refs.leftNavMenu
-                if(keyPath[0]==nav.openedMenus[0]){
-
-                }else{
-                    nav.openedMenus = []
-                }
             }
         }
     };
 </script>
-
-<style>
-    .offsetToolTip{
-        left:55px!important;
-    }
-</style>
 <style scoped="" lang="scss">
     .hleft {
         width: 230px;

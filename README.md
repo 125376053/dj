@@ -27,7 +27,8 @@ git checkout branch 切换分支
 
 git add .
 git commit -m "test"
-
+git pull origin master 拉取远程分支
+git 
 
 git merge <branchName>
 ```

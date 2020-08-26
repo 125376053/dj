@@ -39,9 +39,3 @@ git push                     将主分支推送到远端
 git checkout yourName        切换到自己分支
 git merge master             将主分支合并到自己分支 
 ```
-
-```
-/index 门户首页路由
-/home  管理系统首页路由
-/login 登录页  
-```

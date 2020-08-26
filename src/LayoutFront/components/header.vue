@@ -45,7 +45,9 @@
     export default{
         components: {},
         mounted(){
-
+            if(!this.$route.query.navName){
+                this.$router.push({name:'index'})
+            }
         },
         data(){
             return {
@@ -126,6 +128,7 @@
             twoGoPage(item, item2, index2){
                 this.navName = item.url
                 this.$router.push({name: item2.url, query: {navName: item.url}})
+                this.navIndex = -1
             }
         }
     }

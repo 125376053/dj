@@ -1,51 +1,3 @@
-/*域名或IP*/
-export function check_ipDomian(ipDomian) {
-    var strRegex = "^((https|http):\/\/)?"
-        + "(((([0-9]|1[0-9]{2}|[1-9][0-9]|2[0-4][0-9]|25[0-5])[.]{1}){3}([0-9]|1[0-9]{2}|[1-9][0-9]|2[0-4][0-9]|25[0-5]))" // IP>形式的URL- 199.194.52.184
-        + "|"
-        + "([0-9a-zA-Z\u4E00-\u9FA5\uF900-\uFA2D-]+[.]{1})+[a-zA-Z-]+)" // DOMAIN（域名）形式的URL
-    var re = new RegExp(strRegex);
-    if (!re.test(ipDomian)) {
-        return false;
-    } else {
-        return true;
-    }
-    ;
-}
-
-/*IP*/
-export function check_ip(ip) {
-    var regIP = /^(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])$/;
-    if (!regIP.test(ip)) {
-        return false;
-    } else {
-        return true;
-    }
-    ;
-}
-
-// 检测输入的是否是域名 完整域名,二级域名,通配符域名,不支持http,https
-export function check_domain(domain) {
-    var reg = /^(?=^.{3,255}$)(\*|[a-zA-Z0-9][-a-zA-Z0-9]{0,62})(\.[a-zA-Z0-9][-a-zA-Z0-9]{0,62})+$/
-    var re = new RegExp(reg);
-    if (!re.test(domain)) {
-        return false;
-    } else {
-        return true;
-    }
-    ;
-}
-// 检测输入的是否为中文域名
-export function check_domain2(domain) {
-    var reg = /^(?=^.{3,255}$)([a-zA-Z0-9\u4E00-\u9FA5\uF900-\uFA2D][-a-zA-Z0-9\u4E00-\u9FA5\uF900-\uFA2D]{0,62})(\.[a-zA-Z0-9\u4E00-\u9FA5\uF900-\uFA2D][-a-zA-Z0-9\u4E00-\u9FA5\uF900-\uFA2D]{0,62})+$/
-    var re = new RegExp(reg);
-    if (!re.test(domain)) {
-        return false;
-    } else {
-        return true;
-    }
-    ;
-}
 
 // 检测输入框输入的是否是数字
 export function isNumber(value) {
@@ -53,17 +5,6 @@ export function isNumber(value) {
     if (patrn.exec(value) == null || value == "") {
         return false
     } else {
-        return true
-    }
-}
-export function check_port(value) {
-    // 0-65535
-    var patrn = /^(-)?\d+(\.\d+)?$/;
-    if (patrn.exec(value) == null || value == "") {
-        return false
-    } else if(parseInt(value)<0 || parseInt(value)>65535){
-        return false
-    } else{
         return true
     }
 }

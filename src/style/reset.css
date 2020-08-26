@@ -6,10 +6,9 @@
 }
 
 html, body {
-    font-family:PingFangSC-Regular,'微软雅黑'!important;
+    font-family:'微软雅黑';
     font-size: 12px;
-    /*#E8ECF0*/
-    background: #F8F9FC;
+    background: #fff;
     overflow: hidden;
 }
 body{

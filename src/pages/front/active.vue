@@ -1,6 +1,6 @@
 <template>
-    <div style="height: 100px; background: #eeeeee">
-        底部
+    <div>
+        新闻
     </div>
 </template>
 <script>

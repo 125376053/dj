@@ -1,8 +1,6 @@
 ### git地址
 ```
 https://github.com/125376053/dj.git
-账号 125376053@qq.com
-密码 zcj7416275
 ```
 ```
 git branch  查看本地分支

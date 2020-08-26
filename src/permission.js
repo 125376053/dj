@@ -44,7 +44,11 @@ router.beforeEach((to, from, next) => {
             }
         }
     } else {
-        next()
+        if(to.path=='/'){
+            next('/front')
+        }else{
+            next()
+        }
     }
     NProgress.done()
 })

@@ -9,10 +9,9 @@ html, body {
     font-family:'微软雅黑';
     font-size: 12px;
     background: #fff;
-    overflow: hidden;
 }
 body{
-    font-size: 12px!important;
+    font-size: 12px;
 }
 
 #app {

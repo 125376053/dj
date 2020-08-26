@@ -42,6 +42,66 @@ export const notLoginRouter = [
                 meta:{title:'党建宣传管理'},
                 component: () => import ("@/pages/front/platformChild/platform4.vue"),
             },
+
+            {
+                path:'news',
+                name:'news',
+                meta:{title:'时政要闻'},
+                component: () => import ("@/pages/front/news.vue"),
+            },
+
+            {
+                path:'message',
+                name:'message',
+                meta:{title:'通知公告'},
+                component: () => import ("@/pages/front/message.vue"),
+            },
+
+            {
+                path:'build',
+                name:'build',
+                meta:{title:'党政建设'},
+                component: () => import ("@/pages/front/build.vue"),
+            },
+
+            {
+                path:'active',
+                name:'active',
+                meta:{title:'基层动态'},
+                component: () => import ("@/pages/front/active.vue"),
+            },
+
+            {
+                path:'active',
+                name:'active',
+                meta:{title:'基层动态'},
+                component: () => import ("@/pages/front/active.vue"),
+            },
+
+            {
+                path:'lineStudy',
+                name:'lineStudy',
+                meta:{title:'在线学习'},
+                component: () => import ("@/pages/front/lineStudy.vue"),
+            },
+            {
+                path:'lineStudy1',
+                name:'lineStudy1',
+                meta:{title:'党建学习'},
+                component: () => import ("@/pages/front/lineStudyChild/lineStudy1.vue"),
+            },
+            {
+                path:'lineStudy2',
+                name:'lineStudy2',
+                meta:{title:'视频课件'},
+                component: () => import ("@/pages/front/lineStudyChild/lineStudy2.vue"),
+            },
+            {
+                path:'lineStudy3',
+                name:'lineStudy3',
+                meta:{title:'党章学习'},
+                component: () => import ("@/pages/front/lineStudyChild/lineStudy3.vue"),
+            },
         ]
     },
     {
@@ -49,10 +109,10 @@ export const notLoginRouter = [
         component: () => import ("@/pages/login/login.vue"),
         name:'login'
     },
-    {
+/*    {
         path: '/',
         redirect:'/front',
-    },
+    },*/
     {
         path: '*',
         redirect:'/front',
